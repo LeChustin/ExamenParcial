@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void GuardarDatos(View v) {
 
-        SqlLite sqlLite = new SqlLite(this, "persona", null, 1);
+        SqlLite sqlLite = new SqlLite(this, "pago", null, 1);
         SQLiteDatabase sqLiteDatabase = sqlLite.getWritableDatabase();
 
         int codigo = Integer.parseInt(txtCodigo.getText().toString());
@@ -77,33 +77,48 @@ public class MainActivity extends AppCompatActivity {
 
         ContentValues values = new ContentValues();
         values.put("codigo", codigo);
-        values.put("nombre", nombre);
-        values.put("apellidos", apellidos);
-        values.put("edad", edad);
+        values.put("funcionario", funcionario);
+        values.put("cargo", cargo);
+        values.put("area", area);
+        values.put("hijos", hijos);
+        values.put("estado", estado);
+        values.put("descuento", descuento);
 
-        Long resultado = sqLiteDatabase.insert("persona", null, values);
+        Long resultado = sqLiteDatabase.insert("pago", null, values);
         Toast.makeText(this, "Resultado: " + resultado, Toast.LENGTH_SHORT).show();
     }
 
     private void limpiarTextos() {
         txtCodigo.setText("");
-        txtNombre.setText("");
-        txtApellidos.setText("");
-        txtEdad.setText("");
+        txtFuncionario.setText("");
+        txtCargo.setText("");
+        txtArea.setText("");
+        txtHijos.setText("");
+        txtEstado.setText("");
+        txtDescuento.setText("");
     }
 
     public void validarTextos() {
         if (txtCodigo.getText().toString().equals("")) {
-            txtCodigo.setText("Falta el codigo");
+            txtCodigo.setText("Falta el Codigo");
         }
-        if (txtNombre.getText().toString().equals("")) {
-            txtNombre.setText("Falta el Nombre");
+        if (txtFuncionario.getText().toString().equals("")) {
+            txtFuncionario.setText("Falta el Nombre de Funcionario");
         }
-        if (txtApellidos.getText().toString().equals("")) {
-            txtApellidos.setText("Falta el Apellidos");
+        if (txtCargo.getText().toString().equals("")) {
+            txtCargo.setText("Falta el Cargo");
         }
-        if (txtEdad.getText().toString().equals("")) {
-            txtEdad.setText("Falta el Edad");
+        if (txtArea.getText().toString().equals("")) {
+            txtArea.setText("Falta el Area");
+        }
+        if (txtHijos.getText().toString().equals("")) {
+            txtHijos.setText("Falta el Numero de Hijos");
+        }
+        if (txtEstado.getText().toString().equals("")) {
+            txtEstado.setText("Falta el Estado");
+        }
+        if (txtDescuento.getText().toString().equals("")) {
+            txtDescuento.setText("Falta si hay o no Descuento");
         }
     }
 
