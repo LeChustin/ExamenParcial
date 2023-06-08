@@ -43,9 +43,12 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.personaV
     public void onBindViewHolder(personaView personaView, int i) {
         Persona persona = personaList.get(i);
         personaView.txtcodigoMostrar.setText(String.valueOf(persona.getCodigo()));
-        personaView.txtnombreMostrar.setText(persona.getNombre());
-        personaView.txtapellidosMostrar.setText(persona.getApellidos());
-        personaView.txtedadMostrar.setText(persona.getEdad());
+        personaView.txtFuncionarioMostrar.setText(persona.getFuncionario());
+        personaView.txtCargoMostrar.setText(persona.getCargo());
+        personaView.txtAreaMostrar.setText(persona.getArea());
+        personaView.txtHijosMostrar.setText(persona.getHijos());
+        personaView.txtEstadoMostrar.setText(persona.getEstado());
+        personaView.txtDescuentoMostrar.setText(persona.getDescuento());
         personaView.btnEditar.setOnClickListener(new eventoEditar(persona));
         personaView.btnEliminar.setOnClickListener(new eventoEliminar(persona));
     }
@@ -80,7 +83,7 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.personaV
                 } else {
                     ArrayList<Persona> filtrarLista = new ArrayList<>();
                     for (Persona persona : personaArrayList) {
-                        if (persona.getNombre().toLowerCase().contains(constraint)) {
+                        if (persona.getFuncionario().toLowerCase().contains(constraint)) {
                             filtrarLista.add(persona);
                         }
                     }
@@ -130,16 +133,18 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.personaV
 
 
     public class personaView extends RecyclerView.ViewHolder {
-        private TextView txtcodigoMostrar, txtnombreMostrar, txtapellidosMostrar, txtedadMostrar;
+        private TextView txtcodigoMostrar, txtFuncionarioMostrar, txtCargoMostrar,txtAreaMostrar,txtHijosMostrar,txtEstadoMostrar, txtDescuentoMostrar;
         private Button btnEditar, btnEliminar;
 
         public personaView(@NonNull View itemView) {
             super(itemView);
             txtcodigoMostrar = itemView.findViewById(R.id.txtcodigoMostrar);
-            txtnombreMostrar = itemView.findViewById(R.id.txtNombreMostrar);
-            txtapellidosMostrar = itemView.findViewById(R.id.txtApellidosMostrar);
-            txtedadMostrar = itemView.findViewById(R.id.txtEdadMostrar);
-            btnEditar = itemView.findViewById(R.id.btnEditar);
+            txtFuncionarioMostrar = itemView.findViewById(R.id.txtFuncionarioMostrar);
+            txtCargoMostrar = itemView.findViewById(R.id.txtCargoMostrar);
+            txtAreaMostrar = itemView.findViewById(R.id.txtAreaMostrar);
+            txtHijosMostrar = itemView.findViewById(R.id.txtHijosMostrar);
+            txtEstadoMostrar = itemView.findViewById(R.id.txtEstadoMostrar);
+            txtDescuentoMostrar = itemView.findViewById(R.id.txtDescuentoMostrar);
             btnEliminar = itemView.findViewById(R.id.btnEliminar);
         }
     }

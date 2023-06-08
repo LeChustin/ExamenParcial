@@ -13,7 +13,7 @@ public class SqlLite extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-       db.execSQL("CREATE TABLE IF NOT EXISTS persona(codigo 'int', nombre 'varchar',apellidos 'varchar', edad 'varchar')");
+       db.execSQL("CREATE TABLE IF NOT EXISTS persona(codigo 'int', funcionario 'varchar', cargo 'varchar', area 'varchar', hijos 'varchar',estado 'varchar', descuento 'varchar')");
 
     }
 

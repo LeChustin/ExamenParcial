@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void GuardarDatos(View v) {
 
-        SqlLite sqlLite = new SqlLite(this, "pago", null, 1);
+        SqlLite sqlLite = new SqlLite(this, "persona", null, 1);
         SQLiteDatabase sqLiteDatabase = sqlLite.getWritableDatabase();
 
         int codigo = Integer.parseInt(txtCodigo.getText().toString());
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         values.put("estado", estado);
         values.put("descuento", descuento);
 
-        Long resultado = sqLiteDatabase.insert("pago", null, values);
+        Long resultado = sqLiteDatabase.insert("persona", null, values);
         Toast.makeText(this, "Resultado: " + resultado, Toast.LENGTH_SHORT).show();
     }
 

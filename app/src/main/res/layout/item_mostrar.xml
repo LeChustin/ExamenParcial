@@ -47,17 +47,17 @@
                 android:layout_marginTop="10dp"
                 android:width="2dp"
                 android:gravity="right"
-                android:text="Nombre:"
+                android:text="Funcionario:"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtNombreMostrar"
+                android:id="@+id/txtFuncionarioMostrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:paddingLeft="4dp"
-                android:text="Nombre"
+                android:text="Funcionario"
                 android:textAlignment="center"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -74,16 +74,16 @@
                 android:layout_marginLeft="70dp"
                 android:layout_marginTop="4dp"
                 android:gravity="right"
-                android:text="Apellidos:"
+                android:text="Cargo:"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/txtApellidosMostrar"
+                android:id="@+id/txtCargoMostrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:paddingLeft="4dp"
-                android:text="Apellidos"
+                android:text="Cargo"
                 android:textAlignment="center"
                 android:textSize="14sp" />
 
@@ -99,16 +99,91 @@
                 android:layout_marginLeft="70dp"
                 android:layout_marginTop="4dp"
                 android:gravity="right"
-                android:text="Edad:"
+                android:text="Area:"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/txtEdadMostrar"
+                android:id="@+id/txtAreaMostrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:paddingLeft="4dp"
-                android:text="Edad"
+                android:text="Area"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:text="Hijos:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtHijosMostrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="4dp"
+                android:text="Hijos"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:text="Estado:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtEstadoMostrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="4dp"
+                android:text="Estado"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="4dp"
+                android:gravity="right"
+                android:text="Descuento:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtDescuentoMostrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="4dp"
+                android:text="Descuento"
                 android:textAlignment="center"
                 android:textSize="14sp" />
 
@@ -121,14 +196,6 @@
         android:layout_height="match_parent"
         android:gravity="bottom"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnEditar"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:text="Editar"
-            android:textSize="14dp" />
 
         <Button
             android:id="@+id/btnEliminar"

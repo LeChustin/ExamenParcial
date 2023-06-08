@@ -50,9 +50,12 @@ public class MostrarActivity extends AppCompatActivity implements IAxiliarPerson
         while (cursor.moveToNext()) {
             persona = new Persona();
             persona.setCodigo(cursor.getInt(0));
-            persona.setNombre(cursor.getString(1));
-            persona.setApellidos(cursor.getString(2));
-            persona.setEdad(cursor.getString(3));
+            persona.setFuncionario(cursor.getString(1));
+            persona.setCargo(cursor.getString(2));
+            persona.setArea(cursor.getString(3));
+            persona.setHijos(cursor.getString(4));
+            persona.setEstado(cursor.getString(5));
+            persona.setDescuento(cursor.getString(6));
             personaAdapter.agregarPersona(persona);
         }
     }
@@ -69,7 +72,7 @@ public class MostrarActivity extends AppCompatActivity implements IAxiliarPerson
     public void OpcionEliminar(final Persona persona) {
         AlertDialog.Builder alerta = new AlertDialog.Builder(this);
         alerta.setTitle("Mensaje");
-        alerta.setMessage("Esta seguro que desea Eliminar? " + persona.getNombre() + " " + persona.getApellidos());
+        alerta.setMessage("Esta seguro que desea Eliminar? " + persona.getFuncionario());
         alerta.setCancelable(false);
         alerta.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
             @Override
