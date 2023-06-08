@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
-    private TextInputEditText txtCodigo, txtNombre, txtApellidos, txtEdad;
+    private TextInputEditText txtCodigo,txtFuncionario, txtCargo, txtArea,txtHijos, txtEstado, txtDescuento;
 
     private Button btnGuardar, btnMostrar;
 
@@ -24,9 +24,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
         txtCodigo = (TextInputEditText) findViewById(R.id.txtCodigo);
-        txtNombre = (TextInputEditText) findViewById(R.id.txtNombre);
-        txtApellidos = (TextInputEditText) findViewById(R.id.txtApellidos);
-        txtEdad = (TextInputEditText) findViewById(R.id.txtEdad);
+        txtFuncionario = (TextInputEditText) findViewById(R.id.txtFuncionario);
+        txtCargo = (TextInputEditText) findViewById(R.id.txtCargo);
+        txtArea = (TextInputEditText) findViewById(R.id.txtArea);
+        txtHijos = (TextInputEditText) findViewById(R.id.txtHijos);
+        txtEstado = (TextInputEditText) findViewById(R.id.txtEstado);
+        txtDescuento = (TextInputEditText) findViewById(R.id.txtDescuento);
         btnGuardar = (Button) findViewById(R.id.btnGuardar);
         btnMostrar = (Button) findViewById(R.id.btnMostrar);
 
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-             if(txtCodigo.getText().toString().equals("")|| txtNombre.getText().toString().equals("")||txtApellidos.getText().toString().equals("") || txtEdad.getText().toString().equals("")){
+             if(txtCodigo.getText().toString().equals("")|| txtFuncionario.getText().toString().equals("")|| txtCargo.getText().toString().equals("")|| txtArea.getText().toString().equals("")||txtHijos.getText().toString().equals("")||txtEstado.getText().toString().equals("") || txtDescuento.getText().toString().equals("")){
                  validarTextos();
              }else{
                  GuardarDatos(v);
@@ -64,9 +67,12 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase sqLiteDatabase = sqlLite.getWritableDatabase();
 
         int codigo = Integer.parseInt(txtCodigo.getText().toString());
-        String nombre = txtNombre.getText().toString();
-        String apellidos = txtApellidos.getText().toString();
-        String edad = txtEdad.getText().toString();
+        String funcionario = txtFuncionario.getText().toString();
+        String cargo = txtCargo.getText().toString();
+        String area = txtArea.getText().toString();
+        String hijos = txtHijos.getText().toString();
+        String estado = txtEstado.getText().toString();
+        String descuento = txtDescuento.getText().toString();
 
 
         ContentValues values = new ContentValues();

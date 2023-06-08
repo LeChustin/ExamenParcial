@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="bottom"
-                android:text="Tutorial 1 - Android Studio"
+                android:text="ROL DE PAGOS"
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp"
@@ -57,43 +57,85 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtNombreError"
+                    android:id="@+id/txtFuncionarioError"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtNombre"
+                        android:id="@+id/txtFuncionario"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nombre"
+                        android:hint="Funcionario"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtApellidosError"
+                    android:id="@+id/txtCargoError"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtApellidos"
+                        android:id="@+id/txtCargo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Apellidos"
-                        android:inputType="textEmailAddress" />
+                        android:hint="Cargo"
+                        android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtEdadError"
+                    android:id="@+id/txtAreaError"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtEdad"
+                        android:id="@+id/txtArea"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Edad"
-                        android:inputType="number" />
+                        android:hint="Area"
+                        android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtEstadoError"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtEstado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Estado"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtHijosError"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtHijos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Hijos"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtDescuentoError"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDescuento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Descuento"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
 
             </LinearLayout>
 
