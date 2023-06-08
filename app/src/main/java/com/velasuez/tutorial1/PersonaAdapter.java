@@ -49,7 +49,6 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.personaV
         personaView.txtHijosMostrar.setText(persona.getHijos());
         personaView.txtEstadoMostrar.setText(persona.getEstado());
         personaView.txtDescuentoMostrar.setText(persona.getDescuento());
-        personaView.btnEditar.setOnClickListener(new eventoEditar(persona));
         personaView.btnEliminar.setOnClickListener(new eventoEliminar(persona));
     }
 
@@ -103,19 +102,6 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.personaV
     }
 
 
-    class eventoEditar implements View.OnClickListener {
-
-        private Persona persona;
-
-        public eventoEditar(Persona persona) {
-            this.persona = persona;
-        }
-
-        @Override
-        public void onClick(View v) {
-            iAxiliarPersona.OpcionEditar(persona);
-        }
-    }
 
 
     class eventoEliminar implements View.OnClickListener {

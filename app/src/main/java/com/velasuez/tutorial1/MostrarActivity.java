@@ -60,13 +60,7 @@ public class MostrarActivity extends AppCompatActivity implements IAxiliarPerson
         }
     }
 
-
-    @Override
-    public void OpcionEditar(Persona persona) {
-        Intent intent = new Intent(MostrarActivity.this, EditarActivity.class);
-        intent.putExtra("persona", persona);
-        startActivity(intent);
-    }
+    
 
     @Override
     public void OpcionEliminar(final Persona persona) {
